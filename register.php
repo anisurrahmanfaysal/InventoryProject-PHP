@@ -14,12 +14,13 @@
             <div class="container">
                 <form method="post" action="register.php" enctype="multipart/form-data">
                     <h1>Registration Form</h1>
+                    <hr>
                     <div>
-                        <label>Your Name</label>
+                        <label>Your Name<span>*</span></label>
                         <input name="name" id="name" type="text" required placeholder="Enter Your Name">
                     </div>
                     <div>
-                        <label>Your Username</label>
+                        <label>Your Username<span>*</span></label>
                         <input name="uname" id="uname" type="text" required placeholder="Enter UserYour Name">
                     </div>
                     <div>
@@ -27,25 +28,23 @@
                         <input name="email" id="email" type="text" placeholder="Enter Your Email">
                     </div>
                     <div>
-                        <label>Password</label>
+                        <label>Password<span>*</span></label>
                         <input name="pass" id="pass" type="password" required placeholder="Enter Your Password">
                     </div>
                     <div>
-                        <label>Repeat Password</label>
+                        <label>Repeat Password<span>*</span></label>
                         <input name="r_pass" id="rpass" type="text" required placeholder="Confirm Password">
                     </div>
-                    <div>
+                    <div style="text-align: center">
                         <p>      <span>***</span>          By creating an account you agree to our Terms and Privacy. </p>
                     </div>
-                    <div>
+                    <div style="text-align: center; padding: 20px">
                         <input type="submit" class="btn btn-success" value="Submit">
                     </div>
-                    <div>
+                    <div style="text-align: center">
                         <p>Already have an account <a href="login.php">Sign in</a></p>
                     </div>
                 </form>
             </div>
     </body>
-
-
 </html>
