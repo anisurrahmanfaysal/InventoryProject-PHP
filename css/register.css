@@ -1,0 +1,10 @@
+.container{
+    padding: 30px;
+    width: 60%;
+    position: relative;
+    margin: auto;
+    background: black;
+    color: whitesmoke;
+    border-radius: 3px;
+    opacity: 90%;
+}
