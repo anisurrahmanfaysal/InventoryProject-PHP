@@ -3,6 +3,14 @@
 
     $conn= connect();
     closeConnect($conn);
+
+    if(isset($_POST['submit'])){
+        $name= $_POST['name'];
+        $uName= $_POST['uname'];
+        $email= $_POST['email']P$_POST['email']:;
+        $pass= $_POST['pass'];
+        $rPass= $_POST['r_pass'];
+    }
 ?>
 
     <head>
@@ -42,7 +50,7 @@
                         <p>      <span>***</span>          By creating an account you agree to our Terms and Privacy. </p>
                     </div>
                     <div style="text-align: center; padding: 20px">
-                        <input type="submit" class="btn btn-success" value="Submit">
+                        <input type="submit" class="btn btn-success" value="Submit" name="submit">
                     </div>
                     <div style="text-align: center">
                         <p>Already have an account <a href="login.php">Sign in</a></p>
