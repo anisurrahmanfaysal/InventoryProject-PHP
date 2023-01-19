@@ -1,5 +1,8 @@
 <?php
+    include 'auth/connection.php';
 
+    $conn= connect();
+    closeConnect($conn);
 ?>
 
     <head>
