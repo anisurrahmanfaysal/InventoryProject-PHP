@@ -2,14 +2,27 @@
     include 'auth/connection.php';
 
     $conn= connect();
+    $m = '';
     closeConnect($conn);
 
     if(isset($_POST['submit'])){
         $name= $_POST['name'];
         $uName= $_POST['uname'];
-        $email= $_POST['email']P$_POST['email']:;
+        $email= $_POST['email']?$_POST['email']:'';
         $pass= $_POST['pass'];
         $rPass= $_POST['r_pass'];
+        if($pass===$pass){
+            $sq = "INSERT INTO users_info (name,u_name,email,password)".
+            "VALUES('$name','$uName','$email','$pass')";
+            if($conn->quary($sq)===true){
+                header(Location: login.php);
+            }
+            else{
+                $m = 'Connection not established!';
+            }
+        }
+        else
+            $m = "Passwords don't match!";
     }
 ?>
 
@@ -21,8 +34,11 @@
         <link type="text/css" rel="stylesheet" href="css/style.css">
         <link href="css/register.css" type="text/css" rel="stylesheet">
     </head>
-    <div>
+    <body>
+        
+        <div>
             <div class="container">
+            <span><?php if($m!='') echo $m; ?></span>
                 <form method="post" action="register.php" enctype="multipart/form-data">
                     <h1>Registration Form</h1>
                     <hr>
