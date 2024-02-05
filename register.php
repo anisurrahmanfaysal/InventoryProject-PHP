@@ -12,10 +12,9 @@
         $pass= $_POST['pass'];
         $rPass= $_POST['r_pass'];
         if($pass===$pass){
-            $sq = "INSERT INTO users_info (name,u_name,email,password)".
-            "VALUES('$name','$uName','$email','$pass')";
+            $sq = "INSERT INTO users_info (name,u_name,email,password) VALUES('$name','$uName','$email','$pass')";
             if($conn->quary($sq)===true){
-                header(Location: login.php);
+                header(string:'Location: login.php');
             }
             else{
                 $m = 'Connection not established!';
